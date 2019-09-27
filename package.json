@@ -1,0 +1,36 @@
+{
+  "name": "NEW",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "latest",
+    "gulp-coffee": "latest",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "latest",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest",
+    "del": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-html-replace": "latest",
+    "merge-stream": "latest"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  }
+}

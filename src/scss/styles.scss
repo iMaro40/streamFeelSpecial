@@ -1,0 +1,75 @@
+//Variable Overrides
+$landingColor: #ff9933;
+$mainFont: 'Raleway', sans-serif;
+//
+
+.navbar{
+  font-family: $mainFont;
+  background: rgba(255,255,255,.3);
+
+  .navbar-brand{
+    width: 60px;
+    height: 60px;
+  }
+  .nav{
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+  }
+  a{
+    font-size: 20px;
+  }
+}
+
+body{
+  background-image:  url("../images/landing_page.jpg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.jumbotron{
+  display:flex;
+  margin:50px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(236,112,23,.4) !important;
+
+
+
+
+  a{
+    font-family: $mainFont;
+    color: white;
+    font-size: 100px;
+    text-decoration: underline;
+
+  }
+}
+
+#main{
+
+  margin: 10px;
+
+
+
+
+
+  .imgContainer{
+    displaY: flex;
+
+    justify-content: center;
+
+  }
+  img{
+    width: 400px;
+    height: 650px;
+  }
+}
+
+//
+@import "../../node_modules/bootstrap/scss/bootstrap";
