@@ -1,6 +1,10 @@
 //Variable Overrides
-$landingColor: #ff9933;
+$landingColor: rgba(236,112,23,.3);
 $mainFont: 'Raleway', sans-serif;
+$contactHeadingFont: 'Montserrat', sans-serif;
+$contactTextFont: "Courier New", Courier, monospace;
+$headingTextOutline: 2px #9b59ff;
+$normalTextOutline: 0.5px #9b59ff;
 //
 
 .navbar{
@@ -31,15 +35,21 @@ body{
   background-attachment: fixed;
 }
 
+.container{
+  margin: 50px;
+}
+
+.container-fluid{
+  margin: 50px;
+}
+
 
 .jumbotron{
   display:flex;
   margin:50px;
   align-items: center;
   justify-content: center;
-  background-color: rgba(236,112,23,.4) !important;
-
-
+  background-color: $landingColor  !important;
 
 
   a{
@@ -50,24 +60,172 @@ body{
 
   }
 }
+#lightBox{
+  background-color: black;
 
-#main{
+  z-index: 100;
+  position: fixed;
+  display: none;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 
-  margin: 10px;
-
-
-
-
-
-  .imgContainer{
-    displaY: flex;
-
+  &.visible{
+    display: flex;
     justify-content: center;
+  }
 
+  #displayImage{
+    height: 100%;
+    width: auto;
+  }
+}
+#mainContent{
+  background-color: $landingColor;
+  h2{
+    font-family: $contactHeadingFont;
+    font-size: 50px;
+    -webkit-text-stroke: $headingTextOutline;
+  }
+  p{
+    color:white;
+    font-family: $contactTextFont;
+    font-size: 30px;
+    -webkit-text-stroke: $normalTextOutline;
+  }
+
+  &>.row{
+    margin-top: 20px;
+  }
+}
+#theSlider{
+  display: flex;
+  justify-content: center;
+  #theCarousel{
+    margin: 10px;
+    .imgContainer{
+      displaY: flex;
+
+      justify-content: center;
+
+    }
+    img{
+      width: 400px;
+      height: 650px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+#fanCams{
+  #theVids{
+    .row{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      h5{
+        font-family: $contactHeadingFont;
+        -webkit-text-stroke: $headingTextOutline;
+        font-size: 40px;
+      }
+
+    }
+  }
+
+}
+
+#sideBar{
+  z-index: 1 !important;
+  right: 0px;
+  
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+  .card{
+    background-color: #E6A6A6;
+    .card-title{
+      font-family: $contactHeadingFont;
+    }
+    .card-text{
+      font-family: $contactTextFont;
+      margin: 0 !important;
+    }
+  }
+
+
+}
+#footerContainer{
+
+  background-color: rgba(173,127,127,.5);
+  margin: 0;
+  bottom: 0px;
+  p{
+    font-size: 30px;
+    font-family: $contactTextFont;
+  }
+  #footer{
+    background-color: solid gray;
+  }
+}
+
+#aboutPage{
+  background-color: $landingColor;
+  h1{
+    font-family: $contactHeadingFont;
+    font-size: 50px;
   }
   img{
-    width: 400px;
-    height: 650px;
+    height:100%;
+    width: 100%;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  p{
+    font-family: $contactTextFont;
+    font-size:: 22px;
+  }
+
+  .row{
+    justify-content: center;
+  }
+
+}
+
+#contactPage{
+  background-color: $landingColor;
+  h1{
+    font-family: $contactHeadingFont;
+    font-size: 40px;
+  }
+  img{
+    max-width: 20%;
+    max-height: 20%;
+  }
+
+  p{
+    font-family: $contactTextFont;
+    font-size:: 22px;
+  }
+  .col{
+    text-align: center;
+  }
+}
+
+#actualContactPage{
+  background-color: $landingColor;
+  h1{
+    font-family: $contactHeadingFont;
+    font-size: 100px;
+  }
+  .row{
+    justify-content: center;
   }
 }
 

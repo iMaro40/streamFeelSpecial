@@ -1,9 +1,26 @@
 "use strict";
 
-var x = document.getElementsByClassName("jumbotron")[0];
-var link = x.children[0];
+var theLightBox = document.getElementById("lightBox");
+var theSideBar = document.getElementById("sideBar");
+var images = document.getElementsByClassName("contentImage");
 
-x.addEventListener("mouseover",function(e){
-  x.classList.toggle("animated");
-  console.log('fuck you');
-});
+for(let i = 0; i<images.length;i++){
+  images[i].addEventListener("click",showOverlay);
+}
+
+theLightBox.addEventListener("click",hide);
+
+function showOverlay(){
+
+  var toDisplay = document.getElementById("displayImage");
+  toDisplay.src = this.src;
+  theLightBox.classList.toggle("visible");
+  theSideBar.classList.toggle ("visible");
+
+}
+
+function hide(){
+  console.log("hidden");
+  theLightBox.classList.toggle("visible");
+  theSideBar.classList.toggle ("visible");
+}
